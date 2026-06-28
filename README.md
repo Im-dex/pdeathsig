@@ -61,9 +61,9 @@ This project pins Rust with `rust-toolchain.toml` and pins direct dependencies i
 
 ```bash
 cargo fmt --check
-cargo clippy --locked --all-targets -- -D warnings
-cargo test --locked
-cargo build --locked --release
+cargo clippy --all-targets -- -D warnings
+cargo test
+cargo build --release
 ```
 
 ## Platform
