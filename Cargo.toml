@@ -1,0 +1,21 @@
+[package]
+name = "pdeathsig"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.96.0"
+license = "MIT"
+description = "Tiny Linux wrapper that execs a command after setting PR_SET_PDEATHSIG."
+repository = "https://github.com/Im-dex/pdeathsig"
+keywords = ["linux", "process", "prctl", "pdeathsig"]
+categories = ["command-line-utilities", "os::linux-apis"]
+publish = false
+
+[dependencies]
+libc = "=0.2.177"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = "z"
