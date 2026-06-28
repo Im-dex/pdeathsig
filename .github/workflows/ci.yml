@@ -25,6 +25,9 @@ jobs:
           toolchain: 1.96.0
           components: rustfmt, clippy
 
+      - name: Generate lockfile
+        run: cargo generate-lockfile
+
       - name: Check formatting
         run: cargo fmt --check
 
