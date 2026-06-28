@@ -46,6 +46,9 @@ jobs:
           linker = "aarch64-linux-gnu-gcc"
           EOF
 
+      - name: Generate lockfile
+        run: cargo generate-lockfile
+
       - name: Build
         run: cargo build --locked --release --target ${{ matrix.target }}
 
